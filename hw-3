@@ -1,0 +1,51 @@
+<?php
+
+//*Email Validation
+function checkEmail($email){
+
+
+    if(strpos($email,'@') && strpos($email,".com")) {
+        echo "Email is valid";
+    } else {
+        echo "Please give a valid email";
+    }
+    
+    };
+    checkEmail("test@gmail.com");
+
+
+//*Password Validation
+function passwordValidation($password){
+    
+    $Length = strlen(($password));
+    if($Length >= 8 && $Length <=12)
+    {
+        echo "Perfect password";
+    }
+    else
+    {
+        echo "Please,write  a password whose length is 8 to 12";
+    }
+    
+    }
+    passwordValidation("jiki567891212");
+
+//*Check File Extension
+function CheckExtension($img){
+
+    $check_extension = explode('.',$img);
+    $file_extension = end($check_extension);
+    
+    if($file_extension === 'jpg')
+        {
+            echo "File is accepted"; 
+        }
+    else
+        {
+            echo "Please,upload jpg file";
+        }
+    }
+    CheckExtension('me.jpgg');
+
+
+?>
